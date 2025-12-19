@@ -13,7 +13,7 @@ Content-Type: application/json
 {
   "name": "Doom Eternal",
   "genre": "FPS",
-  "price": 129.90,
+  "price": 79.90,
   "releaseDate": "2020-03-20"
 }
 
