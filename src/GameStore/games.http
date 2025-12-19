@@ -4,7 +4,7 @@ GET http://localhost:5138/ping
 GET http://localhost:5138/games
 
 ###
-GET http://localhost:5138/games/4
+GET http://localhost:5138/games/6
 
 ###
 POST http://localhost:5138/games
@@ -16,3 +16,18 @@ Content-Type: application/json
   "price": 129.90,
   "releaseDate": "2020-03-20"
 }
+
+###
+PUT http://localhost:5138/games/5
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "The Witcher 3 (ATUALIZADO)",
+  "genre": "RPG (ATUALIZADO)",
+  "price": 8.80,
+  "releaseDate": "2000-01-01"
+}
+
+###
+DELETE http://localhost:5138/games/2
