@@ -1,0 +1,18 @@
+GET http://localhost:5138/ping
+
+###
+GET http://localhost:5138/games
+
+###
+GET http://localhost:5138/games/4
+
+###
+POST http://localhost:5138/games
+Content-Type: application/json
+
+{
+  "name": "Doom Eternal",
+  "genre": "FPS",
+  "price": 129.90,
+  "releaseDate": "2020-03-20"
+}
