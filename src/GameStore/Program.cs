@@ -8,7 +8,7 @@ builder.Services.AddSqlite<GameStoreContext>(connString);
 
 var app = builder.Build();
 
-app.MapUtilityEndpoints();
+app.MapUtilitiesEndpoints();
 app.MapGenresEndpoints();
 app.MapGamesEndpoints();
 

@@ -1,8 +1,8 @@
 namespace GameStore.Endpoints;
 
-public static class UtilityEndpoints
+public static class UtilitiesEndpoints
 {
-    public static WebApplication MapUtilityEndpoints(this WebApplication app)
+    public static WebApplication MapUtilitiesEndpoints(this WebApplication app)
     {
         app.MapGet("/ping", () => "Pong!");
         
