@@ -479,5 +479,7 @@ $RECYCLE.BIN/
 # App Settings Json
 appsettings.Development.json
 
-# Banco local
+# SQLite database and temporary log files
 *.db
+*.db-shm
+*.db-wal

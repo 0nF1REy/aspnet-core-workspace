@@ -9,8 +9,10 @@ builder.Services.AddSqlite<GameStoreContext>(connString);
 
 var app = builder.Build();
 
-// Chamadas de métodos de extensão
+// Map endpoints
 app.MapGamesEndpoints();
 app.MapUtilityEndpoints();
+
+app.MigrateDb();
 
 app.Run();
