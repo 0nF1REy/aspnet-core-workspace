@@ -2,18 +2,13 @@ using GameStore.Dtos;
 using GameStore.Data;
 using GameStore.Entities;
 using GameStore.Mapping;
+using Microsoft.EntityFrameworkCore;
 
 namespace GameStore.Endpoints;
 
 public static class GamesEndpoints
 {
     const string GetGameEndpointName = "GetGame";
-
-    private static readonly List<GameSummaryDto> games = [
-        new (1, "The Witcher 3", "RPG", 99.90m, new DateOnly(2015, 5, 19)),
-        new (2, "Hollow Knight", "Metroidvania", 46.99m, new DateOnly(2017, 2, 24)),
-        new (3, "Stardew Valley", "Simulation", 24.99m, new DateOnly(2016, 2, 26))
-    ];
 
     public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app)
     {
@@ -22,7 +17,11 @@ public static class GamesEndpoints
                        .WithParameterValidation();
 
         // GET /games
-        group.MapGet("/", () => games);
+        group.MapGet("/", (GameStoreContext dbContext) =>
+            dbContext.Games
+                     .Include(game => game.Genre)
+                     .Select(game => game.ToGameSummaryDto())
+                     .AsNoTracking());
 
         // GET /games/{id}
         group.MapGet("/{id}", (int id, GameStoreContext dbContext) =>
@@ -68,9 +67,13 @@ public static class GamesEndpoints
         });
 
         // DELETE /games/{id}
-        group.MapDelete("/{id}", (int id) =>
+        group.MapDelete("/{id}", (int id, GameStoreContext dbContext) =>
         {
-            games.RemoveAll(game => game.Id == id);
+            dbContext.Games
+                .Where(games => games.Id == id)
+                .ExecuteDelete();
+
+
             return Results.NoContent();
         });
 
