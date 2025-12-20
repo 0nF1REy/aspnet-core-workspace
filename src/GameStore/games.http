@@ -4,29 +4,28 @@ GET http://localhost:5138/ping
 GET http://localhost:5138/games
 
 ###
-GET http://localhost:5138/games/6
+GET http://localhost:5138/games/4
 
 ###
 POST http://localhost:5138/games
 Content-Type: application/json
 
 {
-  "name": "The King of Fighters '98",
+  "name": "Street Fighter II",
   "genreId": 1,
-  "price": 49.90,
-  "releaseDate": "1998-07-28"
+  "price": 39.90,
+  "releaseDate": "1991-02-06"
 }
 
 ###
-PUT http://localhost:5138/games/5
+PUT http://localhost:5138/games/4
 Content-Type: application/json
 
 {
-  "id": 1,
-  "name": "The Witcher 3 (ATUALIZADO)",
-  "genre": "RPG (ATUALIZADO)",
-  "price": 8.80,
-  "releaseDate": "2000-01-01"
+  "name": "Street Fighter II (ATUALIZADO)",
+  "genreId": 1,
+  "price": 39.90,
+  "releaseDate": "1991-02-06"
 }
 
 ###
