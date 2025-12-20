@@ -11,10 +11,10 @@ POST http://localhost:5138/games
 Content-Type: application/json
 
 {
-  "name": "Doom Eternal",
-  "genre": "FPS",
-  "price": 79.90,
-  "releaseDate": "2020-03-20"
+  "name": "The King of Fighters '98",
+  "genreId": 1,
+  "price": 49.90,
+  "releaseDate": "1998-07-28"
 }
 
 ###
