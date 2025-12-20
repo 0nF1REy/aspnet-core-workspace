@@ -1,10 +1,10 @@
-using GameStore.Dtos;
-using GameStore.Data;
-using GameStore.Entities;
-using GameStore.Mapping;
+using GameStore.Api.Dtos;
+using GameStore.Api.Data;
+using GameStore.Api.Entities;
+using GameStore.Api.Mapping;
 using Microsoft.EntityFrameworkCore;
 
-namespace GameStore.Endpoints;
+namespace GameStore.Api.Endpoints;
 
 public static class GamesEndpoints
 {

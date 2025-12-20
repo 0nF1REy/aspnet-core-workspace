@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace GameStore.Dtos;
+namespace GameStore.Api.Dtos;
 
 public record class UpdateGameDto(
     [Required]

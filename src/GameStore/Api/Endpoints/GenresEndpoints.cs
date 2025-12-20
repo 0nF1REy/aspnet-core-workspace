@@ -1,8 +1,8 @@
-using GameStore.Data;
-using GameStore.Mapping;
+using GameStore.Api.Data;
+using GameStore.Api.Mapping;
 using Microsoft.EntityFrameworkCore;
 
-namespace GameStore.Endpoints;
+namespace GameStore.Api.Endpoints;
 
 public static class GenresEndpoints
 {

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using GameStore.Entities;
+using GameStore.Api.Entities;
 
-namespace GameStore.Data;
+namespace GameStore.Api.Data;
 
 public class GameStoreContext : DbContext
 {

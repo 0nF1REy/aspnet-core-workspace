@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace GameStore.Data;
+namespace GameStore.Api.Data;
 
 public static class DataExtensions
 {

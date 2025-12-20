@@ -1,4 +1,4 @@
-namespace GameStore.Endpoints;
+namespace GameStore.Api.Endpoints;
 
 public static class UtilitiesEndpoints
 {

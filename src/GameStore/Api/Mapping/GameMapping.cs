@@ -1,7 +1,7 @@
-using GameStore.Dtos;
-using GameStore.Entities;
+using GameStore.Api.Dtos;
+using GameStore.Api.Entities;
 
-namespace GameStore.Mapping;
+namespace GameStore.Api.Mapping;
 
 public static class GameMapping
 {

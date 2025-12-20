@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace GameStore.Data.Migrations
+namespace GameStore.Api.Data.Migrations
 {
     /// <inheritdoc />
     public partial class SeedGenres : Migration
