@@ -1,6 +1,3 @@
-GET http://localhost:5138/ping
-
-###
 GET http://localhost:5138/games
 
 ###
