@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TemplateApp.Api/TemplateApp.Api.csproj" />
+    <Project Path="src/TemplateApp.AppHost/TemplateApp.AppHost.csproj" />
+    <Project Path="src/TemplateApp.ServiceDefaults/TemplateApp.ServiceDefaults.csproj" />
+  </Folder>
+</Solution>
